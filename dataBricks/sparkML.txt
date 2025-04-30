@@ -1,0 +1,24 @@
+VectorAssembler
+
+REGRESSAO
+	LinearRegression
+	GeneralizedLinearRegression
+	DecisionTreeRegressor
+	
+
+CLASSIFICAÇÃO
+	Logistic Regression
+	DecisionTrees
+	RandomForests
+	Gradient-Boosted Trees
+	Multlayer Perceptron 
+
+CLUESTERING
+	KMeans
+
+
+PIPELINE: VectorAssembler, StringIndexer, OneHotEncoder, StandardScaler, PCA
+AVALIAÇÃO: Train/Test Split, CrossValidator, ParamGridBuilder
+
+Model Persistence (salvar e carregar modelos com .write().overwrite().save())
+

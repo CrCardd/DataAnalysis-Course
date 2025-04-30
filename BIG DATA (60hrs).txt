@@ -1,0 +1,11 @@
+BIG DATA (60hrs)
+	o que é?
+	história
+	exemplos
+	dificuldades enfrentadas
+	problema que soluciona
+	como soluciona
+	implementação de map_reduce do zero
+	implementação do seu map_reduce junto ao processamento multi_core
+	
+	
