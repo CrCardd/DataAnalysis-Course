@@ -6,6 +6,13 @@ BIG DATA (60hrs)
 	problema que soluciona
 	como soluciona
 	implementação de map_reduce do zero
-	implementação do seu map_reduce junto ao processamento multi_core
+	implementação do seu map_reduce com processamento multi_core
+	utilizar o map_reduce com processamento multi_core para análise de um grande arquivo testando o processamento
+	teoria de como funciona mais detalhadamento e porque isso melhora a performance
+	instalação do pyspark para roda-lo localmente
+	apresentar as funções de map_reduce reais
+	atividades com grandes arquivos
+	
+	
 	
 	
