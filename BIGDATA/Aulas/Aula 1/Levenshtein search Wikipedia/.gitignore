@@ -1,0 +1,4 @@
+data
+cleaned_data/*
+result_multicore.txt
+result_simple.txt
