@@ -1,0 +1,10 @@
+BIG DATA (60hrs)
+	desafio que motivou o uso de bigdata
+	como soluciona
+	exemplos
+	Levenshtein	
+	
+	
+	o que é?	
+	história
+	dificuldades enfrentadas
