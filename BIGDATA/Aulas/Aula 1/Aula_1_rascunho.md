@@ -22,3 +22,4 @@ Para entendermos melhor como funciona vamos realizar um desafio. Faça uma busca
 A Distância de Levenshtein serve para conseguir saber a quantidade de operações, inserção, deleção ou substituição, uma palavra deve sofrer para se transformar em outra, por exemplo: banana para batata precisa sofrer duas alterações.
 
 #### 3.1.1 Como funciona
+Levenshtein
