@@ -4,7 +4,7 @@ import os
 
 SEARCH = 'ascii'
 
-folder_data = "./data"
+folder_data = "./WikipediaTI"
 list_data = os.listdir(folder_data)
 metric = len(SEARCH)/2
 

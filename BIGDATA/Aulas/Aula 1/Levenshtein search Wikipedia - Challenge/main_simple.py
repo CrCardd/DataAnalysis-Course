@@ -5,7 +5,7 @@ import os
 
 SEARCH = 'data'
 
-folder_data = "./data"
+folder_data = "./WikipediaTI"
 list_data = os.listdir(folder_data)
 
 def levenshteinDistance(str1, str2):
