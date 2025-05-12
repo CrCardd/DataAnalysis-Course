@@ -1,13 +1,15 @@
+from multiprocessing import Pool
+import math as mt
 import re
 import os
 
 
-SEARCH = 'ascii'
+SEARCH = 'data'
 
 folder_data = "./WikipediaTI"
 list_data = os.listdir(folder_data)
 metric = len(SEARCH)/2
-
+best_len = 20
 
 def levenshteinDistance(str1, str2):
     s1 = len(str1) + 1
@@ -27,7 +29,6 @@ def levenshteinDistance(str1, str2):
 
     return tab[s1-1][s2-1]
 
-
 def process(data):
     scores = []
     for archive in data:
@@ -38,7 +39,6 @@ def process(data):
         content = re.sub(r'<.*?>', '', content, flags=re.DOTALL)
         lines = content.splitlines()
 
-        
         score = 0
         scored = False
         for line in lines:
@@ -60,15 +60,28 @@ def process(data):
         print(archive)
 
     sorted_values = sorted(scores, key=lambda item: item[1], reverse=True)
-    best_twenty = sorted_values[:20]
-    return best_twenty
+    bests = sorted_values[:best_len]
+    return bests
 
 
+if __name__ == '__main__':
+    n_cores = 12
+    batch_len = mt.ceil(len(list_data)/n_cores)
 
-results = process(list_data)
-sorted_values = sorted(results, key=lambda item: item[1], reverse=True)
-with open('result_simple.txt', 'w', encoding='utf-8') as result:
-    for score in sorted_values:
-        result.write(f'{score[0].replace(' - Wikipedia.html', '')} \t : {score[1]}\n')
+    cores_list_data = []
+    for i in range(n_cores):
+        cores_list_data.append(list_data[i*batch_len:(i+1)*batch_len])
+    
+    final = []
+    with Pool(processes=n_cores) as pool:
+        results = pool.map(process, cores_list_data)
+    for result in results:
+        final.extend(result)
+
+    sorted_values = sorted(final, key=lambda item: item[1], reverse=True)
+    best_twenty = sorted_values[:best_len]
+    with open('result_multicore.txt', 'w', encoding='utf-8') as result:
+        for score in best_twenty:
+            result.write(f'{score[0].replace(' - Wikipedia.html', '')} \t : {score[1]}\n')
 
 
