@@ -1,0 +1,36 @@
++------------------------------------------------------------------+
+| POSICAO  | 1        | 2        | 3       | 4        | 5          |
+| -------  | -------- | -------- | ------- | -------- | ---------- |
+| PESSOA   | Leonardo | Cristian | Eduardo | Nycollas | Donathan   |
+| FILME    | Encanto  | Barbie   | Rocky   | Sonic    | O Irlandes |
+| NOTA     | 9        | 7        | 10      | 3        | 1          |
+| IDADE    | 8        | 15       | 20      | 19       | 23         |
++------------------------------------------------------------------+
+
+
+
+| PESSOA   | FILME      | NOTA | IDADE |
+| -------- | ---------- | ---- | ----- |
+| Cristian | Rocky      | 3.0  | 19    |
+| Donathan | Encanto    | 10.0 | 8     |
+| Nycollas | O Irlandês | 7.0  | 15    |
+| Leonardo | Sonic 3    | 1.0  | 20    |
+| Eduardo  | Barbie     | 9.0  | 23    |
+
+
+
+Eduardo está exatamente no meio
+Eduardo deu a melhor nota
+A pessoa de 8 anos está em uma das extremidades da fila
+Em algum lugar a esquerda de Nycollas está a pessoa mais nova
+Cristian assistiu barbie e não é o mais novo
+Donathan é o mais velho da fila
+Quem assistiu encanto não é o mais velho
+Donathan não assistiu a rocky nem sonic 3
+Nycollas está entre Eduardo e Donathan
+Nycollas é mais velho que Cristian e mais novo que quem viu Rocky
+Encanto recebeu nota 9
+Cristian gostou mais de seu filme do que Nycollas e menos do que Leonardo
+A pessoa de 19 anos deu nota 3 ao seu filme
+
+

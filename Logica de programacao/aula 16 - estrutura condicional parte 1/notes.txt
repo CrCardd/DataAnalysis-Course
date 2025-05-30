@@ -1,0 +1,16 @@
+https://github.com/CrCardd/MS-atividade_final
+
+------------
+IF-ELIF-ELSE
+------------
+compressor?
+
+
+=====================================================
+-----------
+LOOPS
+------------
+piramide
+fibonacci
+bin -> dec
+dec -> bin
