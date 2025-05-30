@@ -11,15 +11,19 @@ jogador = int(input("Escolha sua jogada:\n>> "))
 jogador -= 1
 
 computador = rd.randint(0,len(opcoes)-1)
-print(f"\nO computador jogou:\t{opcoes[computador]}\n\n")
+try:
+    print(f"\nVocê jogou:\t\t{opcoes[jogador]}")
+    print(f"Computador jogou:\t{opcoes[computador]}\n")
 
+    if jogador - computador == 1:
+        print("Voce venceu!!")
+    elif -(jogador - computador) == len(opcoes)-1:
+        print("Voce venceu!!")
+    elif jogador == computador :
+        print("Empate...")
+    else: 
+        print("Voce perdeu. :(")
 
-if jogador - computador == 1:
-    print("Voce venceu!!")
-elif abs(jogador - computador) == len(opcoes)-1:
-    print("Voce venceu!!")
-elif jogador == computador :
-    print("Empate...")
-else: 
-    print("Voce perdeu. :(")
+except:
+    print("Escolha um indice valido...")
 

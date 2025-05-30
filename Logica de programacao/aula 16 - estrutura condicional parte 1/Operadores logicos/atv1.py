@@ -11,9 +11,12 @@ lugar = int(input("Insira para onde você deseja ir:\n>> "))
 lugar -= 1
 chuva = input("\nEsta chovendo? (S/N)\n>> ")
 
-if(lugares[lugar] == lugares[0] and chuva.lower() == "s"):
-    print("É melhor não ir...")
-elif(lugares[lugar] == lugares[3] and chuva.lower() == "s"):
-    print("É melhor não ir...")
-else:
-    print("Pode ir tranquilo :)")
+try:
+    if(lugares[lugar] == lugares[0] and chuva.lower() == "s"):
+        print("É melhor não ir...")
+    elif(lugares[lugar] == lugares[3] and chuva.lower() == "s"):
+        print("É melhor não ir...")
+    else:
+        print("Pode ir tranquilo :)")
+except:
+    print("\nEscolha um indice valido...")
