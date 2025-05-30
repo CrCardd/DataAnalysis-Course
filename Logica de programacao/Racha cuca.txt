@@ -19,18 +19,22 @@
 
 
 
-Eduardo está exatamente no meio
-Eduardo deu a melhor nota
-A pessoa de 8 anos está em uma das extremidades da fila
-Em algum lugar a esquerda de Nycollas está a pessoa mais nova
-Cristian assistiu barbie e não é o mais novo
-Donathan é o mais velho da fila
-Quem assistiu encanto não é o mais velho
-Donathan não assistiu a rocky nem sonic 3
-Nycollas está entre Eduardo e Donathan
-Nycollas é mais velho que Cristian e mais novo que quem viu Rocky
-Encanto recebeu nota 9
-Cristian gostou mais de seu filme do que Nycollas e menos do que Leonardo
-A pessoa de 19 anos deu nota 3 ao seu filme
+1 - Eduardo está exatamente no meio
+2 - A pessoa de 19 anos deu nota 3 ao seu filme
+3 - Encanto recebeu nota 9
+4 - Cristian assistiu barbie e não é o mais novo
+5 - Eduardo deu a melhor nota
+6 - A pessoa de 8 anos está em uma das extremidades da fila
+7 - Donathan é o mais velho da fila
+8 - Quem assistiu encanto não é o mais velho
+9 - Em algum lugar a esquerda de Nycollas está a pessoa mais nova
+10 - Donathan não assistiu a rocky nem sonic
+11 - Cristian gostou mais de seu filme do que Nycollas e menos do que Leonardo
+12 - Nycollas é mais velho que Cristian e mais novo que quem viu Rocky
+13 - Nycollas está entre Eduardo e Donathan
+
+
+
+
 
 
