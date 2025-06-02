@@ -1,0 +1,1 @@
+running python 3.12.10 requires ipykernel

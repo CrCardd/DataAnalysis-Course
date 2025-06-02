@@ -1,0 +1,25 @@
+matriz = [
+    [6,  73, 29, 12, 32, 100, 39, 18, 67, 85],
+    [70, 20, 59, 4,  28, 43,  3,  60, 93, 84],
+    [95, 40, 2,  99, 33, 52,  47, 21, 30, 23],
+    [17, 71, 35, 10, 61, 91,  92, 42, 98, 13],
+    [57, 26, 22, 7,  14, 11,  55, 25, 41, 76],
+    [27, 16, 45, 63, 15, 50,  72, 66, 31, 65],
+    [89, 75, 48, 94, 1,  19,  80, 53, 36, 58],
+    [24, 83, 34, 62, 78, 5,   9,  97, 82, 96],
+    [38, 88, 8,  68, 74, 79,  46, 37, 64, 49],
+    [87, 90, 44, 51, 86, 77,  56, 69, 81, 54]
+]
+
+indices_valores = []
+
+for i in range(int(len(matriz)/2)):
+    for j in range(int(len(matriz)/2)):
+        val1 = matriz[i][j]
+        val2 = matriz[i][len(matriz)-1-j]
+        val3 = matriz[len(matriz)-1-i][j]
+        val4 = matriz[len(matriz)-1-i][len(matriz)-1-j]
+
+        indices_valores.append((val1, val2, val3, val4))
+    
+print(indices_valores)
