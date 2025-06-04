@@ -21,7 +21,7 @@ def search(pivot, data, caminhos, base):
 
     esquerda = search(pivot + camada, data, caminhos, base)
     direita = search(pivot + camada + 1, data, caminhos, base)
-    caminhos[pivot] = (int)(direita > esquerda)
+    caminhos[pivot] = int(direita > esquerda)
 
     return data[pivot] + esquerda if esquerda > direita else data[pivot] + direita
 
@@ -36,10 +36,10 @@ caminhos = [0 for _ in range(length)]
 
 
 
-a = search(0, piramide, caminhos, base)
+melhorPontuacao = search(0, piramide, caminhos, base)
 
 printPiramide(piramide)
 printPiramide(caminhos)
 
-print(f"\nMelhor pontuação:\t{a}")
+print(f"\nMelhor pontuação:\t{melhorPontuacao}")
 
