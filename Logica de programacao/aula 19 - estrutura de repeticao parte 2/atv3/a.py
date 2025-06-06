@@ -1,3 +1,3 @@
-from lib import generate
+from lib import get_data
 
-generate(100)
+entidades = get_data()
