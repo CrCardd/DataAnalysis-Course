@@ -1,5 +1,5 @@
 import random as rd
-from data import get_data
+from lib import get_data
 
 def filter(dados, colunas_comparacao):
 
