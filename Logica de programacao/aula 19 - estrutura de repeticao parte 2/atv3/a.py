@@ -1,25 +1,20 @@
 from lib import get_data, generate
 
 def connect(relations,a,b):
-    crr = a
-    last = a
-    way = [crr]
-
-    while (relations[a]!= ['']) and (not b in relations[crr]):
-        if relations[crr] == ['']:
-            crr = last
+    way = [a]
+    while (way != []) and (not b in way):
+        if relations[way[len(way)-1]] == []:
             way.pop()
             continue
 
-        last = crr
-        crr = relations[crr][0]
-        relations[last] = relations[last].remove(crr)
-        way.append(crr)
-    
+        next = relations[way[len(way)-1]][0]
+        relations[way[len(way)-1]].remove(next)
+        way.append(next)
+
     print(way)
-    return b in relations[crr]
+    return b in way
 
 
-# entidades = get_data('./data.txt')
-# result = connect(entidades, '5','3')
-# print(result)
+entidades = get_data('./data.txt')
+result = connect(entidades, '58','80')
+print(result)
