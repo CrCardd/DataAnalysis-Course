@@ -1,8 +1,6 @@
-def fatoracao(num):
-    res = 1
-    for i in range(1, num+1):
-        print(i)
-        res *= i
-    return res
+fibonacci = [0,1]
 
-print(fatoracao(6))
+vezes = int(input("Digite quantos valores de fibonacci você deseja:\n>> "))
+for i in range(vezes-2):
+    fibonacci.append(fibonacci[-1]+fibonacci[-2])
+print(fibonacci)

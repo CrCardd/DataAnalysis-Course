@@ -1,18 +1,10 @@
-quantidade = int(input("Digite quantos alunos deseja cadastrar:\n>> "))
-alunos = {}
+numero = int(input("Digite um número para ser verificado: "))
 
-for _ in range(quantidade):
-    print("\n\n\n")
-    new = {}
-    nome = input("Insira o nome do aluno:\n>>")
-    new["Idade"] = int(input(f"Insira a idade do(a) {nome}:\n>> "))
-    new["Hobby"] = input(f"Insira o hobbie favorito do(a) {nome}:\n>> ")
-    alunos[nome] = new
+numero = 11
+primo = True
+for n in range(2, int(numero ** 0.5)+1):
+    if numero % n == 0:
+        primo = False
+        break
 
-
-for aluno in alunos:
-    print(100*"=")
-    print(f"||\tNome:\t{aluno}")
-    print(f"||\tIdade:\t{alunos[aluno]['Idade']}")
-    print(f"||\tHobby:\t{alunos[aluno]['Hobby']}")
-print(100*"=")
+print(primo)

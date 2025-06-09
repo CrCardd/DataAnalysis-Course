@@ -1,8 +1,13 @@
 from lib import get_data, generate
 
-def connect(relations,a,b):
+def is_connected(relations,a,b):
     way = [a]
-    while (way != []) and (not b in way):
+
+    if relations[a] != []:
+        way.append(relations[a][0])
+        relations[a].remove(relations[a][0])
+
+    while (way != []) and (way[len(way)-1] != b):
         if relations[way[len(way)-1]] == []:
             way.pop()
             continue
@@ -12,9 +17,8 @@ def connect(relations,a,b):
         way.append(next)
 
     print(way)
-    return b in way
-
+    return b in way and len(way) > 1
 
 entidades = get_data('./data.txt')
-result = connect(entidades, '58','80')
-print(result)
+print(is_connected(entidades, '3','3'))
+

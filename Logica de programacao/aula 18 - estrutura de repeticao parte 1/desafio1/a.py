@@ -61,10 +61,6 @@ def group(dados, colunas_reduzidas):
                         continue
                     dados_retorno[i_dr][coluna].append(linha[coluna])
 
-
-
-
-
     return dados_retorno
 
 
