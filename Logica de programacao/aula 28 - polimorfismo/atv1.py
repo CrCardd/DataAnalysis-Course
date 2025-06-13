@@ -1,27 +1,28 @@
-import random as rd
 from typing import override
 
 def array(lista):
-    length = len(lista)
-    array = Array(length)
-
-    for i in range(length):
-        array[i] = lista[i]
-
-    return array
+    return Array(lista)
 
 class Array():
 
     iteracao_atual = 0
+    _lista = []
 
-    def __init__(self, e):
-        if type(e) == list:
-            self.tamanho = len(e)
-            self._lista = e
+    def __init__(self, E):
+        if type(E) == list:
+            self.tamanho = len(E)
+            self._lista = [None for _ in range(self.tamanho)]
+            for i in range(self.tamanho):
+                if type(E[i]) == list:
+                    self._lista[i] = Array(E[i])
+                    continue
+                self._lista[i] = E[i]
+                
+
             return
         
-        self.tamanho = e
-        self._lista = [None for _ in range(e)]
+        self.tamanho = E
+        self._lista = [None for _ in range(E)]
 
     #=========================================================
     #                       Métodos
@@ -33,11 +34,21 @@ class Array():
         if len(self) <= 1:
             return self
 
+        # lista_none = []
+        # lista = []
+        # for i in range(len(self)):
+        #     if self[i] != int and self[i]!=str:
+        #         lista_none.append(self[i])
+        #     else:
+        #         lista.append(self[i])
+        
+
+
         pivot = self[0]
         x = 0
-
+        
         for y in range(1, len(self)):
-            if(self[y] < pivot):
+            if self[y] < pivot:
                 x += 1  
                 self[x], self[y] = self[y], self[x]
 
@@ -152,32 +163,26 @@ class Array():
 
 
 A = Array([53,5,1,3,6,4,9,0,20])
-B = Array([i for i in range(10)])
-C = Array(10)
-
-for a in A:
-    print(a, end=' - ')
+B = Array([[53,5,1],3,6,4,9,[[0],20]])
+C = Array([i for i in range(10)])
+D = Array(10)
 
 for i in range(5):
-    C[i] = i
+    D[i] = i
 
-print()
-
-for c in C:
-    print(c, end=' - ')
-
-
+print(B)
 
 # print(A)
 # print(B)
 # print(C)
+# print(D)
 # print('=================')
-# print(f'A+B       = {A + B}')
-# print(f'A&B       = {A & B}')
-# print(f'A|B       = {A | B}')
+# print(f'len(A)    = {len(A)}')
+# print(f'A+C       = {A + C}')
+# print(f'A&C       = {A & C}')
+# print(f'A|C       = {A | C}')
 # print(f'A[:5]     = {A[:5]}')
 # print(f'A[5:]     = {A[5:]}')
 # print(f'A[:]      = {A[:]}')
 # print(f'A.sort()  = {A.sort()}')
-# print(f'len(A)    = {len(A)}')
 # print(f'C.size()  = {C.size()}')
